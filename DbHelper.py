@@ -43,8 +43,6 @@ class DbHelper(object):
             result = self.cur.fetchall()
         except Exception as e:
             raise e
-        finally:
-            self.conn.close()
         return result
 
     def close(self):
